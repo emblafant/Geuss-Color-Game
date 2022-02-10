@@ -4,8 +4,10 @@
 //JS classes
 
 .chosen {
-  border-color: green;
-  border-style: solid;
+  box-shadow: inset 0 0 0 200px rgba(234, 234, 236, 0.5);
+  color: $background1;
+  font-weight: bold;
+}
 
 .unclickable {
   pointer-events: none;
