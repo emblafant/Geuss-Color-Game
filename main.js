@@ -9,6 +9,12 @@ const colorBox3 = document.querySelector("#colorBox3");
 
 const nextBtn = document.querySelector("#nextBtn");
 
+const resultPopup = document.querySelector("#resultPopup");
+const newHighScoreText = document.querySelector("#newHighScore");
+const yourScoreText = document.querySelector("#yourScore");
+const yourHighScoreText = document.querySelector("#yourHighScore");
+const playAgainBtn = document.querySelector("#playAgainBtn");
+
 const randomColorCode = () => {
   const colorCode = "#"+Math.floor(Math.random()*16777215).toString(16);
   return colorCode;
@@ -44,6 +50,7 @@ const makeUnlickable = () => {
   colorBox2.classList.add("unclickable");
   colorBox3.classList.add("unclickable");
 }
+
 let highScore = JSON.parse(localStorage.getItem("highScore"));
 highScoreText.innerText = highScore;
 let currentScore = JSON.parse(localStorage.getItem("storedCurrentScore"));
@@ -51,6 +58,11 @@ if (currentScore) {
   currentScoreText.innerText = currentScore;
 } else {
   currentScoreText.innerText = 0;
+}
+if (highScore) {
+  highScoreText.innerText = highScore;
+} else {
+  highScoreText.innerText = 0;
 }
 
 const calculateNewScore = () => {
@@ -79,15 +91,32 @@ colorBox3.addEventListener("click", () => {
   nextBtn.innerText = "Result";
 });
 
+const showResult = () => {
+  resultPopup.classList.remove("hidden");
+  if (currentScore > highScore) {
+    newHighScoreText.classList.remove("hidden");
+  };
+  if (!currentScore) {
+    currentScore = 0;
+  }
+  yourScoreText.innerText = `Your Score: ${currentScore}`;
+  yourHighScoreText.innerText = `Your HighScore: ${highScore}`;
+}
+
 nextBtn.addEventListener("click", () => {
   if (nextBtn.innerText == "Result") {
-    alert("hello");
+    showResult();
     localStorage.removeItem("storedCurrentScore");
     if (currentScore > highScore) {
       localStorage.removeItem("highScore");
       localStorage.setItem("highScore", currentScore);
-    }
+    };
+
   } else {
     document.location.reload();
   }
+});
+
+playAgainBtn.addEventListener("click", () => {
+  document.location.reload();
 })
