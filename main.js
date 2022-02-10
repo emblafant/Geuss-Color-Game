@@ -82,13 +82,13 @@ colorBox2.addEventListener("click", () => {
   colorBox2.classList.add("incorrect");
   makeUnlickable();
   nextBtn.classList.remove("unclickable");
-  nextBtn.innerText = "Result";
+  nextBtn.innerText = "result";
 });
 colorBox3.addEventListener("click", () => {
   colorBox3.classList.add("incorrect");
   makeUnlickable();
   nextBtn.classList.remove("unclickable");
-  nextBtn.innerText = "Result";
+  nextBtn.innerText = "result";
 });
 
 const showResult = () => {
@@ -104,7 +104,7 @@ const showResult = () => {
 }
 
 nextBtn.addEventListener("click", () => {
-  if (nextBtn.innerText == "Result") {
+  if (nextBtn.innerText == "result") {
     showResult();
     localStorage.removeItem("storedCurrentScore");
     if (currentScore > highScore) {

@@ -16,8 +16,14 @@
     <h1>Guess the Color</h1>
     <h2 id="colorCode"></h2>
     <div id="scoresContainer">
-      <h3 id="highScore">0</h3>
-      <h3 id="currentScore">0</h3>
+      <div id="highScoreContainer">
+        <p id="highScore">0</p>
+        <h3>HighScore</h3>
+      </div>
+      <div id="scoreContainer">
+        <p id="currentScore">0</p>
+        <h3>Your Score</h3>
+      </div>
     </div>
     <div id="colorBoxesContainer">
       <div id="colorBox1">correct</div>
@@ -26,12 +32,15 @@
     </div>
     <button id="nextBtn" class="unclickable">next</button>
     <div id="resultPopup" class="hidden">
-      <h2>Result</h2>
-      <h3 id="newHighScore" class="hidden">New High Score!</h3>
-      <h3 id="yourScore"></h3>
+      <h2>Your Score</h2>
+      <div id="scoreResultContainer">
+        <h3 id="newHighScore" class="hidden">New High Score!</h3>
+        <h3 id="yourScore"></h3>
+      </div>
       <h4 id="yourHighScore"></h4>
       <button id="playAgainBtn">play again</button>
     </div>
   </main>
+  <div id="backgroundOverlay" class="hidden"></div>
 </body>
 </html>
