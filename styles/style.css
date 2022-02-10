@@ -302,6 +302,26 @@ button {
 @media (min-width: 601px) {
   .result-popup h2 {
     font-size: 50px;
+    margin: 0 0 30px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .result-popup {
+    width: 500px;
+    height: 350px;
+  }
+  .result-popup h2 {
+    font-size: 30px;
+  }
+  .result-popup h3 {
+    margin: 0;
+  }
+  .result-popup h4 {
+    font-size: 20px;
+  }
+  .result-popup p {
+    font-size: 14px;
   }
 }
 
@@ -328,6 +348,12 @@ button {
 @media (min-width: 601px) {
   .play-again-button {
     width: 140px;
+  }
+}
+
+@media (min-width: 769px) {
+  .play-again-button {
+    margin: 20px 0 0 0;
   }
 }
 
