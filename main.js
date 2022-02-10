@@ -5,6 +5,8 @@ const colorBoxCorrect = document.querySelector("#colorBox1");
 const colorBox2 = document.querySelector("#colorBox2");
 const colorBox3 = document.querySelector("#colorBox3");
 
+const nextBtn = document.querySelector("#nextBtn");
+
 const randomColorCode = () => {
   const colorCode = "#"+Math.floor(Math.random()*16777215).toString(16);
   return colorCode;
@@ -48,8 +50,18 @@ colorBoxCorrect.addEventListener("click", () => {
 colorBox2.addEventListener("click", () => {
   colorBox2.classList.add("incorrect");
   makeUnlickable();
+  nextBtn.innerText = "Result";
 });
 colorBox3.addEventListener("click", () => {
   colorBox3.classList.add("incorrect");
   makeUnlickable();
+  nextBtn.innerText = "Result";
 });
+
+nextBtn.addEventListener("click", () => {
+  if (nextBtn.innerText == "Result") {
+    alert("hello");
+  } else {
+    document.location.reload();
+  }
+})
