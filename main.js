@@ -1,4 +1,6 @@
 const colorCodeText = document.querySelector("#colorCode");
+const highScoreText = document.querySelector("#highScore");
+const currentScoreText = document.querySelector("#currentScore");
 
 const colorBoxesContainer = document.querySelector("#colorBoxesContainer");
 const colorBoxCorrect = document.querySelector("#colorBox1");
@@ -43,24 +45,39 @@ const makeUnlickable = () => {
   colorBox3.classList.add("unclickable");
 }
 
+let currentScore = JSON.parse(localStorage.getItem("storedCurrentScore"));
+currentScoreText.innerText = currentScore;
+
+const calculateNewScore = () => {
+  currentScore = currentScore + 1;
+  localStorage.removeItem("storedCurrentScore");
+  localStorage.setItem("storedCurrentScore", currentScore);
+}
+
 colorBoxCorrect.addEventListener("click", () => {
   colorBoxCorrect.classList.add("correct");
   makeUnlickable();
+  nextBtn.classList.remove("unclickable");
+  calculateNewScore();
+  currentScoreText.innerText = currentScore;
 });
 colorBox2.addEventListener("click", () => {
   colorBox2.classList.add("incorrect");
   makeUnlickable();
+  nextBtn.classList.remove("unclickable");
   nextBtn.innerText = "Result";
 });
 colorBox3.addEventListener("click", () => {
   colorBox3.classList.add("incorrect");
   makeUnlickable();
+  nextBtn.classList.remove("unclickable");
   nextBtn.innerText = "Result";
 });
 
 nextBtn.addEventListener("click", () => {
   if (nextBtn.innerText == "Result") {
     alert("hello");
+    localStorage.removeItem("storedCurrentScore");
   } else {
     document.location.reload();
   }
