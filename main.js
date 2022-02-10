@@ -35,3 +35,21 @@ for (let i = colorBoxesContainer.children.length; i >= 0; i--) {
   colorBoxesContainer.appendChild(colorBoxesContainer.children[Math.random() * i | 0]);
 };
 
+const makeUnlickable = () => {
+  colorBoxCorrect.classList.add("unclickable");
+  colorBox2.classList.add("unclickable");
+  colorBox3.classList.add("unclickable");
+}
+
+colorBoxCorrect.addEventListener("click", () => {
+  colorBoxCorrect.classList.add("correct");
+  makeUnlickable();
+});
+colorBox2.addEventListener("click", () => {
+  colorBox2.classList.add("incorrect");
+  makeUnlickable();
+});
+colorBox3.addEventListener("click", () => {
+  colorBox3.classList.add("incorrect");
+  makeUnlickable();
+});
