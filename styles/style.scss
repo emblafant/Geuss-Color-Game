@@ -17,6 +17,23 @@
   display: none;
 }
 
+//General styling
+
 body {
   font-family: 'Roboto', sans-serif;
+  color: $white;
+  background-color: $background1;
+}
+
+* {
+  font-weight: 400;
+}
+
+.number {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
 }

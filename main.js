@@ -102,8 +102,8 @@ const showResult = () => {
   if (!currentScore) {
     currentScore = 0;
   }
-  yourScoreText.innerText = `Your Score: ${currentScore}`;
-  yourHighScoreText.innerText = `Your HighScore: ${highScore}`;
+  yourScoreText.innerText = currentScore;
+  yourHighScoreText.innerText = `HighScore: ${highScore}`;
 }
 
 nextBtn.addEventListener("click", () => {

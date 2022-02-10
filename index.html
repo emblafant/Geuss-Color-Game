@@ -14,14 +14,14 @@
 <body>
   <main>
     <h1>Guess the Color</h1>
-    <h2 id="colorCode"></h2>
+    <h2 id="colorCode" class="bold"></h2>
     <div id="scoresContainer">
       <div id="highScoreContainer">
-        <p id="highScore">0</p>
+        <p id="highScore" class="number">0</p>
         <h3>HighScore</h3>
       </div>
       <div id="scoreContainer">
-        <p id="currentScore">0</p>
+        <p id="currentScore" class="number">0</p>
         <h3>Your Score</h3>
       </div>
     </div>
@@ -34,10 +34,10 @@
     <div id="resultPopup" class="hidden">
       <h2>Your Score</h2>
       <div id="scoreResultContainer">
-        <h3 id="newHighScore" class="hidden">New High Score!</h3>
-        <h3 id="yourScore"></h3>
+        <p id="newHighScore" class="hidden bold">New High Score!</p>
+        <h2 id="yourScore" class="number"></h2>
       </div>
-      <h4 id="yourHighScore"></h4>
+      <h3 id="yourHighScore"></h3>
       <button id="playAgainBtn">play again</button>
     </div>
   </main>

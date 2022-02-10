@@ -15,5 +15,20 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: #EAEAEC;
+  background-color: #524F5F;
+}
+
+* {
+  font-weight: 400;
+}
+
+.number {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
