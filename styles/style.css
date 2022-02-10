@@ -10,7 +10,6 @@ body {
           justify-content: center;
   height: 100vh;
   width: 100vw;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #EAEAEC;
   background-color: #524F5F;
@@ -43,6 +42,14 @@ main {
           align-items: center;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+.color-code {
+  font-size: 30px;
+}
+
 .scoreContainerL {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +57,14 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.scoreContainerL p {
+  font-size: 20px;
+}
+
+.scoreContainerL h3 {
+  font-size: 15px;
 }
 
 .scoreContainerS {
@@ -63,13 +78,42 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px;
+}
+
+.color-box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
 }
 
 .color-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 20px;
   text-align: center;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  margin: 5px 20px;
+  height: 100px;
+  font-size: 30px;
 }
 
 button {
@@ -80,6 +124,10 @@ button {
   font-weight: bold;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  margin: 10px 20px;
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
 }
 
 .background-overlay {
