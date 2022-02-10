@@ -47,7 +47,11 @@ const makeUnlickable = () => {
 let highScore = JSON.parse(localStorage.getItem("highScore"));
 highScoreText.innerText = highScore;
 let currentScore = JSON.parse(localStorage.getItem("storedCurrentScore"));
-currentScoreText.innerText = currentScore;
+if (currentScore) {
+  currentScoreText.innerText = currentScore;
+} else {
+  currentScoreText.innerText = 0;
+}
 
 const calculateNewScore = () => {
   currentScore = currentScore + 1;
