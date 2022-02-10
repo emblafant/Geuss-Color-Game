@@ -40,10 +40,18 @@ main {
 
 h1{
   font-size: 30px;
+
+  @include for-tablet {
+    font-size: 40px;
+  }
 }
 
 .color-code {
   font-size: 30px;
+
+  @include for-tablet {
+    font-size: 60px;
+  }
 }
 
 //Scores
@@ -58,6 +66,15 @@ h1{
   h3 {
     font-size: 15px;
   }
+
+  @include for-tablet {
+    p {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
 }
 
 .scoreContainerS {
@@ -66,16 +83,26 @@ h1{
   align-items: center;
 
   margin: 10px;
+
+  @include for-tablet {
+    margin: 15px 30px 0 30px;
+  }
 }
 
 
 //Color boxes
+
 .color-box-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 100vw;
+
+  @include for-tablet {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .color-box {
@@ -89,6 +116,13 @@ h1{
   margin: 5px 30px;
   height: 100px;
   font-size: 30px;
+
+  @include for-tablet {
+    width: 170px;
+    height: 170px;
+    margin: 50px 10px;
+    font-size: 25px;
+  }
 }
 
 //Buttons
@@ -106,6 +140,14 @@ button {
   width: 200px;
 
   font-size: 20px;
+
+  @include for-tablet {
+    width: 255px;
+    height: 55px;
+    margin: 0;
+
+    font-size: 30px;
+  }
 }
 
 //Popup
