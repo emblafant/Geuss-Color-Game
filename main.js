@@ -44,7 +44,8 @@ const makeUnlickable = () => {
   colorBox2.classList.add("unclickable");
   colorBox3.classList.add("unclickable");
 }
-
+let highScore = JSON.parse(localStorage.getItem("highScore"));
+highScoreText.innerText = highScore;
 let currentScore = JSON.parse(localStorage.getItem("storedCurrentScore"));
 currentScoreText.innerText = currentScore;
 
@@ -78,6 +79,10 @@ nextBtn.addEventListener("click", () => {
   if (nextBtn.innerText == "Result") {
     alert("hello");
     localStorage.removeItem("storedCurrentScore");
+    if (currentScore > highScore) {
+      localStorage.removeItem("highScore");
+      localStorage.setItem("highScore", currentScore);
+    }
   } else {
     document.location.reload();
   }
