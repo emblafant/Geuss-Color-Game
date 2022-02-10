@@ -1,5 +1,8 @@
 const colorCodeText = document.querySelector("#colorCode");
 
+const colorBox1 = document.querySelector("#colorBox1");
+const colorBox2 = document.querySelector("#colorBox2");
+const colorBox3 = document.querySelector("#colorBox3");
 
 const randomColorCode = () => {
   const colorCode = "#"+Math.floor(Math.random()*16777215).toString(16);
@@ -21,4 +24,9 @@ const checkForUniqueColors = () => {
     checkForUniqueColors();
   }
   return;
-}
+};
+
+colorBox1.style.background = colorCodeCorrect;
+colorBox2.style.background = colorCode2;
+colorBox3.style.background = colorCode3;
+
