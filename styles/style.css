@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.correct {
+  border-color: green;
+  border-style: solid;
+}
+
+.incorrect {
+  border-color: red;
+  border-style: solid;
+}
+/*# sourceMappingURL=style.css.map */

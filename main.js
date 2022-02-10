@@ -33,4 +33,5 @@ colorBox3.style.background = colorCode3;
 
 for (let i = colorBoxesContainer.children.length; i >= 0; i--) {
   colorBoxesContainer.appendChild(colorBoxesContainer.children[Math.random() * i | 0]);
-}
+};
+
