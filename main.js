@@ -1,6 +1,7 @@
 const colorCodeText = document.querySelector("#colorCode");
 
-const colorBox1 = document.querySelector("#colorBox1");
+const colorBoxesContainer = document.querySelector("#colorBoxesContainer");
+const colorBoxCorrect = document.querySelector("#colorBox1");
 const colorBox2 = document.querySelector("#colorBox2");
 const colorBox3 = document.querySelector("#colorBox3");
 
@@ -26,7 +27,10 @@ const checkForUniqueColors = () => {
   return;
 };
 
-colorBox1.style.background = colorCodeCorrect;
+colorBoxCorrect.style.background = colorCodeCorrect;
 colorBox2.style.background = colorCode2;
 colorBox3.style.background = colorCode3;
 
+for (let i = colorBoxesContainer.children.length; i >= 0; i--) {
+  colorBoxesContainer.appendChild(colorBoxesContainer.children[Math.random() * i | 0]);
+}
