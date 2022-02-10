@@ -1,27 +1,10 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-
-//JS classes
-
-.chosen {
-  box-shadow: inset 0 0 0 200px rgba(234, 234, 236, 0.5);
-  color: $background1;
-  font-weight: bold;
-}
-
-.unclickable {
-  pointer-events: none;
-}
-
-.hidden {
-  display: none;
-}
-
-
 //General styling
 
 body {
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   color: $white;
   background-color: $background1;
@@ -80,4 +63,49 @@ button {
   color: $background1;
   font-weight: bold;
   box-shadow: $box-shadow-small;
+}
+
+//Popup
+
+.background-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: inset 0 0 0 2000px rgba(234, 234, 236, 0.5);
+}
+
+.result-popup {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $background-popup;
+  border-radius: 10px;
+}
+
+.score-result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//JS classes
+
+.chosen {
+  box-shadow: inset 0 0 0 2000px rgba(234, 234, 236, 0.5);
+  color: $background1;
+  font-weight: bold;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
 }

@@ -9,6 +9,7 @@ const colorBox3 = document.querySelector("#colorBox3");
 
 const nextBtn = document.querySelector("#nextBtn");
 
+const backgroundOverlay = document.querySelector("#backgroundOverlay");
 const resultPopup = document.querySelector("#resultPopup");
 const newHighScoreText = document.querySelector("#newHighScore");
 const yourScoreText = document.querySelector("#yourScore");
@@ -109,6 +110,7 @@ const showResult = () => {
 nextBtn.addEventListener("click", () => {
   if (nextBtn.innerText == "result") {
     showResult();
+    backgroundOverlay.classList.remove("hidden");
     localStorage.removeItem("storedCurrentScore");
     if (currentScore > highScore) {
       localStorage.removeItem("highScore");
