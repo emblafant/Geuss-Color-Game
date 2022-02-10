@@ -1,6 +1,7 @@
 @import "partials/variables";
 @import "partials/mixins";
 
+
 //JS classes
 
 .chosen {
@@ -16,6 +17,7 @@
 .hidden {
   display: none;
 }
+
 
 //General styling
 
@@ -36,4 +38,25 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+//Main
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//Scores
+
+.scoreContainerL {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreContainerS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
