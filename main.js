@@ -72,20 +72,23 @@ const calculateNewScore = () => {
 }
 
 colorBoxCorrect.addEventListener("click", () => {
-  colorBoxCorrect.classList.add("correct");
+  colorBoxCorrect.classList.add("chosen");
+  colorBoxCorrect.innerText = "Correct!";
   makeUnlickable();
   nextBtn.classList.remove("unclickable");
   calculateNewScore();
   currentScoreText.innerText = currentScore;
 });
 colorBox2.addEventListener("click", () => {
-  colorBox2.classList.add("incorrect");
+  colorBox2.classList.add("chosen");
+  colorBox2.innerText = "Incorrect";
   makeUnlickable();
   nextBtn.classList.remove("unclickable");
   nextBtn.innerText = "result";
 });
 colorBox3.addEventListener("click", () => {
-  colorBox3.classList.add("incorrect");
+  colorBox3.classList.add("chosen");
+  colorBox3.innerText = "Incorrect";
   makeUnlickable();
   nextBtn.classList.remove("unclickable");
   nextBtn.innerText = "result";

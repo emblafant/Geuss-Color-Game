@@ -1,15 +1,11 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-.correct {
+//JS classes
+
+.chosen {
   border-color: green;
   border-style: solid;
-}
-
-.incorrect {
-  border-color: red;
-  border-style: solid;
-}
 
 .unclickable {
   pointer-events: none;
