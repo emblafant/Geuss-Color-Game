@@ -193,6 +193,12 @@ button {
     font-size: 20px;
   }
 
+  @include for-tablet {
+    h2 {
+      font-size: 50px;
+    }
+  }
+
 }
 
 .score-result-container {
@@ -206,6 +212,10 @@ button {
   width: 150px;
   font-size: 15px;
   margin: 30px;
+
+  @include for-tablet {
+    width: 140px;
+  }
 }
 
 //JS classes

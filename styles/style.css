@@ -241,6 +241,12 @@ button {
   font-size: 20px;
 }
 
+@media (min-width: 601px) {
+  .result-popup h2 {
+    font-size: 50px;
+  }
+}
+
 .score-result-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,6 +265,12 @@ button {
   width: 150px;
   font-size: 15px;
   margin: 30px;
+}
+
+@media (min-width: 601px) {
+  .play-again-button {
+    width: 140px;
+  }
 }
 
 .chosen {
