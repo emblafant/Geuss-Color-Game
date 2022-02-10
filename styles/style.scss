@@ -86,7 +86,7 @@ h1{
   text-align: center;
   box-shadow: $box-shadow-small;
   align-self: stretch;
-  margin: 5px 20px;
+  margin: 5px 30px;
   height: 100px;
   font-size: 30px;
 }
@@ -127,16 +127,43 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   background-color: $background-popup;
   border-radius: 10px;
   box-shadow: $box-shadow-big;
+
+  height: 400px;
+  width: 90%;
+
+  h2 {
+    font-size: 40px;
+    margin: 30px;
+  }
+  h3 {
+    font-size: 100px;
+    margin: 10px 0 0 0;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+
 }
 
 .score-result-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.play-again-button {
+  height: 30px;
+  width: 150px;
+  font-size: 15px;
+  margin: 30px;
 }
 
 //JS classes
